@@ -40,6 +40,7 @@ Describe "Node.js" {
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
         $useNodeLogContent | Should -Match "Found in cache"
+        write-host "gowri: $useNodeLogContent"
     }
 
     It "Run simple code" {
